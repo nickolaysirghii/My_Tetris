@@ -40,6 +40,11 @@ let fun1 = function(ro,co){
    two.style.backgroundColor = "black";
    three.style.backgroundColor = "black";
    four.style.backgroundColor = "black";
+   one.innerText = ".";
+   two.innerText = ".";
+   three.innerText = ".";
+   four.innerText = ".";
+   
 };
 let fun2 = function(ro,co){
     let a = ".r"+ro+"c"+co;
@@ -54,6 +59,10 @@ let fun2 = function(ro,co){
    two.style.backgroundColor = "rgb(140, 130, 130)";
    three.style.backgroundColor = "rgb(140, 130, 130)";
    four.style.backgroundColor = "rgb(140, 130, 130)";
+   one.innerText = "";
+   two.innerText = "";
+   three.innerText = "";
+   four.innerText = "";
  };
 let fun3 = function(ro,co){
     let d = ".r"+ro+"c"+co;
@@ -68,6 +77,10 @@ let fun3 = function(ro,co){
    two.style.backgroundColor = "black";
    three.style.backgroundColor = "black";
    four.style.backgroundColor = "black";
+   one.innerText = ".";
+   two.innerText = ".";
+   three.innerText = ".";
+   four.innerText = ".";
 };
 let fun4 = function(ro,co){
     let d = ".r"+ro+"c"+co;
@@ -82,6 +95,10 @@ let fun4 = function(ro,co){
    two.style.backgroundColor = "rgb(140, 130, 130)";
    three.style.backgroundColor = "rgb(140, 130, 130)";
    four.style.backgroundColor = "rgb(140, 130, 130)";
+   one.innerText = "";
+   two.innerText = "";
+   three.innerText = "";
+   four.innerText = "";
  };
 let fun5 = function(ro,co){
     let a = ".r"+ro+"c"+co;
@@ -96,6 +113,10 @@ let fun5 = function(ro,co){
    two.style.backgroundColor = "black";
    three.style.backgroundColor = "black";
    four.style.backgroundColor = "black";
+   one.innerText = ".";
+   two.innerText = ".";
+   three.innerText = ".";
+   four.innerText = ".";
 };
 let fun6 = function(ro,co){
     let a = ".r"+ro+"c"+co;
@@ -110,6 +131,10 @@ let fun6 = function(ro,co){
    two.style.backgroundColor = "rgb(140, 130, 130)";
    three.style.backgroundColor = "rgb(140, 130, 130)";
    four.style.backgroundColor = "rgb(140, 130, 130)";
+   one.innerText = "";
+   two.innerText = "";
+   three.innerText = "";
+   four.innerText = "";
  };
  let fun7 = function(ro,co){
     let a = ".r"+ro+"c"+co;
@@ -130,6 +155,13 @@ let fun6 = function(ro,co){
    four.style.backgroundColor = "black";
    five.style.backgroundColor = "rgb(140, 130, 130)";
    six.style.backgroundColor = "rgb(140, 130, 130)";
+   one.innerText = ".";
+   two.innerText = ".";
+   three.innerText = ".";
+   four.innerText = ".";
+   three.innerText = ".";
+   four.innerText = ".";
+
 };
 let fun8 = function(ro,co){
     let a = ".r"+ro+"c"+co;
@@ -144,6 +176,12 @@ let fun8 = function(ro,co){
    two.style.backgroundColor = "rgb(140, 130, 130)";
    three.style.backgroundColor = "rgb(140, 130, 130)";
    four.style.backgroundColor = "rgb(140, 130, 130)";
+   one.innerText = "";
+   two.innerText = "";
+   three.innerText = "";
+   four.innerText = "";
+   
+  
  };
 /////////////////////////////////////////////////////////////////
  let goesDownn = function(begin,end,speed){
@@ -152,7 +190,7 @@ setInterval(function(){if(score < end){ score += 1;
 fun1(score,coll);fun2((score-1),coll);}},speed );};
 
 let goesDownn2 = function(begin,end,speed){
-    let score = begin - 1;let coll = 5;
+    let score = begin - 1;let coll = 10;
 setInterval(function(){if(score < end){ score += 1;
 fun3(score,coll);fun4((score-4),coll);}},speed );};
 
@@ -162,14 +200,54 @@ setInterval(function(){if(score < end){ score += 1;
 fun5(score,coll);fun6((score-2),coll);}},speed );};
 
 let goesDownn4 = function(begin,end,speed){
-    let score = begin - 1;let coll = 6;
+    let score = begin - 1;let coll = 3;
 setInterval(function(){if(score < end){ score += 1;
 fun7(score,coll);fun8((score-2),coll);}},speed );};
+
+let goesDownn5 = function(begin,end,speed){
+    let score = begin - 1;let coll = 8;
+setInterval(function(){if(score < end){ score += 1;
+fun5(score,coll);fun6((score-2),coll);}},speed );};
+
 ///////////////////////////////////////////////////////////////
 onOffButton.addEventListener("click",function(){
-    goesDownn(2,20,400,);
-goesDownn2(5,17,300,);
-goesDownn3(3,19,500,);
-setTimeout(()=>goesDownn4(3,18,600,),2000);
+    goesDownn(2,27,400,);
+goesDownn2(5,24,300,);
+goesDownn3(3,26,500,);
+setTimeout(()=>goesDownn4(3,26,600,),2000);
+setTimeout(()=>goesDownn5(3,26,600,),4000);
 });
-
+let line = document.querySelectorAll(".r27");
+let line8 = document.querySelector(".r27c8");
+let line9 = document.querySelector(".r27c9");
+let line1 = document.querySelector(".r27c1");
+let line2 = document.querySelector(".r27c2");
+let line3 = document.querySelector(".r27c3");
+let line4 = document.querySelector(".r27c4");
+let line5 = document.querySelector(".r27c5");
+let line6 = document.querySelector(".r27c6");
+let line7 = document.querySelector(".r27c7");
+let line10 = document.querySelector(".r27c10");
+setInterval(function(){ if(
+    line1.innerText &&
+    line2.innerText &&
+    line3.innerText &&
+    line4.innerText &&
+    line5.innerText &&
+    line6.innerText &&
+    line7.innerText &&
+    line8.innerText &&
+    line9.innerText &&
+    line10.innerText 
+){
+    line[0].style.backgroundColor = 'red';
+    line[1].style.backgroundColor = 'red';
+    line[2].style.backgroundColor = 'red';
+    line[3].style.backgroundColor = 'red';
+    line[4].style.backgroundColor = 'red';
+    line[5].style.backgroundColor = 'red';
+    line[6].style.backgroundColor = 'red';
+    line[7].style.backgroundColor = 'red';
+    line[8].style.backgroundColor = 'red';
+    line[9].style.backgroundColor = 'red';
+    };},1000)
