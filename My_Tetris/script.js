@@ -240,14 +240,7 @@ setInterval(function(){ if(
     line9.innerText &&
     line10.innerText 
 ){
-    line[0].style.backgroundColor = 'red';
-    line[1].style.backgroundColor = 'red';
-    line[2].style.backgroundColor = 'red';
-    line[3].style.backgroundColor = 'red';
-    line[4].style.backgroundColor = 'red';
-    line[5].style.backgroundColor = 'red';
-    line[6].style.backgroundColor = 'red';
-    line[7].style.backgroundColor = 'red';
-    line[8].style.backgroundColor = 'red';
-    line[9].style.backgroundColor = 'red';
+    for(let i = 0;i<10;i++){
+        line[i].style.backgroundColor = "red";
+    }
     };},1000)
